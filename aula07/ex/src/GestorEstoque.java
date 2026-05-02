@@ -21,7 +21,7 @@ public class GestorEstoque {
                 case 1:
                     // TODO: Implementar Adição
 
-                    System.out.println("Digite o nome do produto para cadastrar: ");
+                    System.out.println("\nDigite o nome do produto para cadastrar: ");
                     String nomeProd = leitor.nextLine();
 
                     if (estoque.contains(nomeProd)) {
@@ -38,9 +38,10 @@ public class GestorEstoque {
                         System.out.println("Estoque Vazio!");
                     } else {
                         Collections.sort(estoque);
+                        
+                        int i = 1;
 
                         for (String itens : estoque) {
-                            int i = 1;
                             System.out.println(i+". "+itens);
                             i++;
                         }
@@ -48,7 +49,7 @@ public class GestorEstoque {
                     break;
                 case 3:
                     // TODO: Implementar Remoção
-                    System.out.println("Digite o nome do produto para remoção: ");
+                    System.out.println("\nDigite o nome do produto para remoção: ");
                     String nameProd = leitor.nextLine();
 
                     if (estoque.contains(nameProd) == false) {
@@ -61,13 +62,12 @@ public class GestorEstoque {
                     break;
                 case 4:
                     // TODO: Implementar Busca
-                    System.out.println("Digite o nome do produto para busca: ");
+                    System.out.println("\nDigite o nome do produto para busca: ");
                     String nameProdu = leitor.nextLine();
 
                     if (estoque.contains(nameProdu)) {
-                        System.out.println("Produto em Estoque na posicção: "+estoque.indexOf(nameProdu));
+                        System.out.println("Produto Encontrado! No indíce: "+estoque.indexOf(nameProdu));
                     } else {
-                        estoque.add(nameProdu);
                         System.out.println("Produto não encontrado no Estoque!");
                     }
 
